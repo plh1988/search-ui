@@ -16,7 +16,7 @@ $(document).ready(function() {
 });
 
 async function searchApiRequest(searchText) {
-        let resposne = await fetch('http://localhost:8089/search/querySuggestion', {
+        let resposne = await fetch('http://35.192.52.57:8089/search/querySuggestion', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -29,7 +29,7 @@ async function searchApiRequest(searchText) {
 }
 
 async function useApiData(searchText) {
-        let resposne = await fetch('http://localhost:8089/search/query', {
+        let resposne = await fetch('http://35.192.52.57:8089/search/query', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
