@@ -35,7 +35,9 @@ async function useApiData(searchText) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({"q": `"${searchText}"`})
+            body: JSON.stringify({"q": `"${searchText}"`,
+                                  "enableDuplicateFiltering": true  
+                                })
         });
         let data = await resposne.json();
         showResult(data);
